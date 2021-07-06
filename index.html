@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 400px;
+            margin: 20px auto;
+            padding-top: 10em;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        a {
+            color: blue;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        a:active {
+            color: red;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .classes {
+            padding-left: 0.4em;
+            border-left: 2px solid grey;
+        }
+
+        .class {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .horario {
+            text-decoration: underline !important;
+        }
+
+        .remove {
+            color: red !important;
+            text-decoration: underline !important;
+        }
+
+        .copyright {
+            font-size: 0.7em;
+        }
+
+        .popup {
+            display: block;
+            position: absolute;
+            z-index: 888;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            min-height: 100px;
+            padding: 1em;
+            border: 1px solid grey;
+            background: white;
+            box-shadow: -1px 5px 28px 0px rgba(0, 0, 0, 0.32);
+        }
+
+        .popup.fechado {
+            display: none;
+        }
+
+        .title {
+            margin: 0;
+            border-bottom: 1px solid grey;
+            margin-bottom: 1em;
+            padding-bottom: 0.2em;
+        }
+
+        #aulalink {
+            border: 1px solid grey;
+            width: 100%;
+        }
+
+        #aulahorario {
+            width: 100%;
+        }
+
+        #aulahorario:empty {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Para experiência optimal, tenha certeza que os scripts de <i>chamada</i> e <i>abrir aula</i> estão instalados e
+        configurados. Se não estão, <a href="https://lucas-bortoli.github.io/userscripts">instale-os aqui</a>.</p>
+    <p>
+    <p>
+        Tenha certeza que esse site tem permissão para <b>abrir popups!</b> São neles que as aulas são abertas e onde
+        tudo acontece. A página que você está vendo agora só agenda as aulas.<br>
+        Habilite os popups clicando aqui: <a id="habilitarPopups" href="#">[habilitar popups]</a> - dê permissão para
+        SEMPRE abrir popups nesse site, senão as aulas não serão abertas!
+    </p><br>
+    <p class="align-right">
+        <button id="abrir-popup-agendar">Agendar aula</button>
+    </p>
+    <ul id="lista-aulas" class="classes tree-view">
+        <!--<li class="class">
+            <span class="horario">8h00</span>
+            <a class="remove">&times;</a>
+        </li>-->
+    </ul>
+    </p>
+    <hr>
+    <p class="copyright">Copyright &copy; 2021 Lucas Bortoli<br>Todos os direitos reservados</p>
+
+    <div class="popup fechado">
+        <p class="title"><a id="close-add-aula" href="#">&times;</a> | Agendar aula...</p>
+        <fieldset>
+            <legend>Horário*</legend>
+            <div class="field-row">
+                <select id="aulahorario">
+                    <!--<option value="__">__</option>-->
+                    <option value="7:15">7h15</option>
+                    <option value="8:00">8h</option>
+                    <option value='8:45'>8h45</option>
+                    <option value="9:30">9h30</option>
+                    <option value="10:35">10h35</option>
+                    <option value="11:20">11h20</option>
+                    <option value="13:30">(tarde) 13h30</option>
+                    <option value="14:00">(tarde monitoria) 14h</option>
+                    <option value="15:00">(tarde) 15h</option>
+                    <option value="15:45">(tarde) 15h45</option>
+                    <option value="16:30">(tarde) 16h30</option>
+                </select>
+            </div>
+        </fieldset><br>
+        <fieldset>
+            <legend>Link*</legend>
+            <div class="field-row">
+                <input placeholder="https://pearson.lti ..." id="aulalink" type="text">
+            </div>
+        </fieldset><br>
+        <section class="field-row">
+            <button id="agendar-confirm">Agendar</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
