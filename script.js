@@ -1,3 +1,55 @@
+// Aulas predefinidas; domingo é index 0, segunda index 1, ..., sábado index 6
+const Predefinidas = [
+    [], // domingo
+    [   // segunda
+        { hr: '7:15', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1663546/external' },
+        { hr: '8:00', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1663548/external' },
+        { hr: '8:45', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1663555/external' },
+        { hr: '9:30', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1663561/external' },
+        { hr: '10:35', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1663563/external' },
+        { hr: '11:20', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1663567/external' },
+    ],
+    [   // terça
+        { hr: '7:15', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668074/external' },
+        { hr: '8:00', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668082/external' },
+        { hr: '8:45', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668085/external' },
+        { hr: '9:30', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668095/external' },
+        { hr: '10:35', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668095/external' },
+        { hr: '11:20', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668101/external' },
+        { hr: '13:30', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668102/external' },
+        { hr: '15:00', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668103/external' },
+        { hr: '16:30', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668105/external' },
+    ],
+    [   // quarta
+        { hr: '7:15', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668177/external' },
+        { hr: '8:00', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668179/external' },
+        { hr: '8:45', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668185/external' },
+        { hr: '9:30', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668188/external' },
+        { hr: '10:35', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1668213/external' },
+        // 11:20 é o mesmo link
+    ],
+    [   // quinta
+        { hr: '7:15', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669747/external' },
+        { hr: '8:00', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669751/external' },
+        { hr: '8:45', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669758/external' },
+        { hr: '9:30', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669764/external' },
+        { hr: '10:35', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669767/external' },
+        { hr: '11:20', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669770/external' },
+        { hr: '13:30', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669777/external' },
+        { hr: '15:00', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669780/external' },
+        { hr: '15:45', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669783/external' },
+    ],
+    [   // sexta
+        { hr: '7:15', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669895/external' },
+        { hr: '8:00', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669897/external' },
+        { hr: '8:45', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669900/external' },
+        { hr: '9:30', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669907/external' },
+        { hr: '10:35', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669915/external' },
+        { hr: '11:20', link: 'https://pearson.lti.elos.vc/rooms/298c3c9cc20c99ee05fb6741f84de6882c851acd/scheduled_meetings/1669918/external' },
+    ],
+    [], // sábado
+]
+
 const Aulas = [
     /*
     {
@@ -150,3 +202,11 @@ HabilitarPopupsBtn.addEventListener('click', () => {
 })
 
 RefreshClassListItems()
+
+setTimeout(() => {
+    // adicionar aulas pré-programadas
+    const dia = (new Date()).getDay()+1
+    const aulas_do_dia = Predefinidas[dia]
+    
+    for (const aula of aulas_do_dia) { Aulas.push({ horario: aula.hr, link: aula.link, jaFoiAberto: false }) }
+}, 500)
