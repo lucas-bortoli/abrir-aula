@@ -144,8 +144,9 @@ const mainLoop = setInterval(() => {
         if (aulaDate < now) {
             console.log('Abrindo aula', aula)
 
-            // abrir aula
-            LoadAula(aula.link)
+            // abrir aula, passando os parâmetros para ela
+            LoadAula(aula.link + location.search)
+
             aula.jaFoiAberto = true
         }
     }
