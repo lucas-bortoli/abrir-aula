@@ -205,7 +205,7 @@ RefreshClassListItems()
 
 setTimeout(() => {
     // adicionar aulas pré-programadas
-    const dia = (new Date()).getDay()+1
+    const dia = (new Date()).getDay()
     const aulas_do_dia = Predefinidas[dia]
     
     for (const aula of aulas_do_dia) { Aulas.push({ horario: aula.hr, link: aula.link, jaFoiAberto: false }) }
