@@ -211,3 +211,7 @@ setTimeout(() => {
     
     for (const aula of aulas_do_dia) { Aulas.push({ horario: aula.hr, link: aula.link, jaFoiAberto: false }) }
 }, 500)
+
+setInterval(() => {
+    if (AulaWindow) AulaWindow.postMessage(location.search, '*')
+}, 500)
