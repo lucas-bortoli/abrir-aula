@@ -82,7 +82,7 @@ const LoadAula = (link) => {
     }
 
     // criar uma nova janela e abrir nela
-    AulaWindow = window.open(link, '_blank', 'width=640,height=480')
+    AulaWindow = window.open(link, '_blank')//, 'width=640,height=480')
 }
 
 const CreateClassListItem = (hr, link, index) => {
